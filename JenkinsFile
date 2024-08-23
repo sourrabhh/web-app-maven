@@ -1,0 +1,19 @@
+pipeline{
+    agent any
+    environment {
+        PATH = "$PATH:/apache-tomcat-9.0.93/bin"
+    }
+
+    stages{
+        stage("Get Code"){
+            steps{
+                git 'https://github.com/sourrabhh/web-app-maven.git'
+            }
+        }
+        stage('Maven Build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+    }
+}

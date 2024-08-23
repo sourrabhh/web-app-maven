@@ -7,7 +7,8 @@ pipeline{
     stages{
         stage("Get Code"){
             steps{
-                git 'https://github.com/sourrabhh/web-app-maven.git'
+                git branch:'main',
+                url: 'https://github.com/sourrabhh/web-app-maven.git'
             }
         }
         stage('Maven Build'){

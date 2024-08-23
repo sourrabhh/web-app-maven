@@ -19,9 +19,8 @@ pipeline{
 
         stage('Code Deploy'){
             steps{
-                sshagent(['Tomcat-Server-two']) {
+                sshagent(['ubuntu1']) {
                     sh 'scp -o StrictHostChecking=no target/web-app.war ubuntu@18.234.28.187:/home/ubuntu/apache-tomcat-9.0.93/webapps'
-                // some block
                 }
             }
         }

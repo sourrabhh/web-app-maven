@@ -61,6 +61,7 @@
             </div>
             <button type="submit">Submit</button>
         </form>
+        <p>Thank You</p>
     </div>
 
     <script>
